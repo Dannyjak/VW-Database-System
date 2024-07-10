@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="menu-toggle" onclick="toggleShift()" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="logo">
+                    <h1>VetWise</h1>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="mission.html">Our Mission</a></li>
+                    <li><a href="whyvw.html">Why VW</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="partners.html">Our Partners</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <div class="main-content" id="mainContent">
+        <div class="cont">
+            <h2 class="slide-in" id="header">Welcome back, Danny</h2>
+            
+        </div>
+    </div> -->
+
+	<div class="content">
+		<div class="other-content">
+			<!-- Your other content goes here -->
+			<h2 class="slide-in" id="header">Welcome back, Danny</h2>
+		</div>
+		<div class="todo-container">
+			<h3>To-Do List</h3>
+			<div class="todo-input-container">
+				<input type="text" id="todo-input" placeholder="Add a new task">
+				<button onclick="addTask()">Add</button>
+			</div>
+			<ul id="todo-list"></ul>
+		</div>
+		
+	</div>
+	
+
+	
+	<script src="dashboard.js"></script>
+    <script>
+        function toggleShift() {
+            var mainContent = document.querySelector('.main-content');
+            var header = document.getElementById('header');
+            var checkbox = document.getElementById('menu-toggle');
+
+            if (checkbox.checked) {
+                mainContent.classList.add('shifted');
+                header.classList.add('shifted-header');
+            } else {
+                mainContent.classList.remove('shifted');
+                header.classList.remove('shifted-header');
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+

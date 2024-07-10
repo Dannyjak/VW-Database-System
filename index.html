@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- External font link -->
+	<link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+	<!-- External stylesheet link -->
+	<link href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+	<nav>
+		<div class="navbar">
+			<div class="container nav-container">
+				<input class="checkbox" type="checkbox" name="" id="menu-toggle" onclick="toggleShift()" />
+				<div class="hamburger-lines">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
+				</div>
+				<div class="logo">
+					<h1>VetWise</h1>
+				</div>
+				<ul class="menu-items">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="mission.html">Our Mission</a></li>
+					<li><a href="whyvw.html">Why VW</a></li>
+					<li><a href="pricing.html">Pricing</a></li>
+					<li><a href="partners.html">Our Partners</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="main-content">
+		<section class="welcome-section">
+			<div class="background-overlay"></div>
+			<div class="welcome-text">
+				<h1>welcome </h1>
+				<a href="login.html" class="login.html">
+					<button class="welcome-button">
+						<span class="welcome-button-text" style="font-family: 'Poppins';">login</span>
+					</button>
+				</a>
+			</div>
+		</section>
+
+		<div class="content">
+			<div class="left-box">
+				<h1>About Us.</h1>
+			</div>
+			<div class="right-box">
+				<p>Designed to be the simplest and most efficient software on the market, 
+				   we aim to make the work of incredible Veterinary Professionals that much simpler.</p>
+			</div>
+		</div>
+		
+	</div>
+
+	<script>
+		function toggleShift() {
+			var mainContent = document.querySelector('.main-content');
+			var checkbox = document.getElementById('menu-toggle');
+
+			if (checkbox.checked) {
+				mainContent.classList.add('shifted');
+			} else {
+				mainContent.classList.remove('shifted');
+			}
+		}
+	</script>
+</body>
+
+</html>
